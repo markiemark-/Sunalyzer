@@ -35,17 +35,17 @@ let translations = [
 ["dash_card_all_time", "All Time", "Allzeit-Werte", "Altijd"],
 ["dash_card_24h", "Short Term History", "Aktueller Verlauf", "Korte termijn geschiedenis"],
 
-["dash_text_today_produced", "Produced today", "Heute erzeugt", "Vandaag geproduceerd"],
-["dash_text_today_consumed", "Consumed today", "Heute verbraucht", "Vandaag verbruikt"],
-["dash_text_today_fed_in", "Fed in today", "Heute eingespeist", "Vandaag teruggeleverd"],
-["dash_text_today_autarky", "Today's autarky", "Heutige Autarkie", "Zelfvoorziening vandaag"],
-["dash_text_today_earned", "Earned today", "Heute verdient", "Vandaag verdiend"],
+["dash_text_today_produced", "Produced today", "Heute erzeugt", "Geproduceerd"],
+["dash_text_today_consumed", "Consumed today", "Heute verbraucht", "Verbruikt"],
+["dash_text_today_fed_in", "Fed in today", "Heute eingespeist", "Teruggeleverd"],
+["dash_text_today_autarky", "Today's autarky", "Heutige Autarkie", "Zelfvoorziening"],
+["dash_text_today_earned", "Earned today", "Heute verdient", "Verdiend"],
 
-["dash_text_all_time_produced", "Produced in total", "Insgesamt erzeugt", "Totaal geproduceerd"],
-["dash_text_all_time_consumed", "Consumed in total", "Insgesamt verbraucht", "Totaal verbruikt"],
-["dash_text_all_time_fed_in", "Fed in total", "Insgesamt eingespeist", "Totaal teruggeleverd"],
+["dash_text_all_time_produced", "Produced in total", "Insgesamt erzeugt", "Geproduceerd"],
+["dash_text_all_time_consumed", "Consumed in total", "Insgesamt verbraucht", "Verbruikt"],
+["dash_text_all_time_fed_in", "Fed in total", "Insgesamt eingespeist", "Teruggeleverd"],
 ["dash_text_all_time_autarky", "Average autarky", "Durchschn. Autarkie", "Gemiddelde zelfvoorziening"],
-["dash_text_all_time_earned", "Earned in total", "Insgesamt verdient", "Totaal verdiend"],
+["dash_text_all_time_earned", "Earned in total", "Insgesamt verdient", "Verdiend"],
 
 // History
 ["history_card_earned", "Earnings", "Einnahmen", "Opbrengsten"],
@@ -134,7 +134,7 @@ let historyStrings = [
     ["daily_data", "Daily Data", "Daten nach Tag", "Daggegevens"],
     ["monthly_data", "Monthly Data", "Daten nach Monat", "Maandgegevens"],
     ["yearly_data", "Yearly Data", "Daten nach Jahr", "Jaargegevens"],
-    ["all_time_data", "All Time Data", "Allzeitdaten", "Altijdgegevens"],
+    ["all_time_data", "All Time Data", "Allzeitdaten", "Totaal"],
 ];
 
 
