@@ -1,125 +1,78 @@
-import requests
-import logging
-import json
+iimport requests
+from datetime import datetime
+from devices.device import Device
 
+class P1Meter(Device):
+    def __init__(self, config):
+        super().__init__(config)
+        self.url = config.get("url", "http://192.168.2.13/api/v2/sm/actual")
 
-# Losse P1 meter  devices
-class P1meter:
-    def __init__(self, json_data):
-        # Demo code for config access
-        logging.info(f"P1 device: "
-                     f"configured host name is "
-                     f"{config.config_data['P1meter']['host_name_P1meter']}")
-
-        self.host_name = config.config_data['P1meter']['host_name_P1meter']
-
-        #self.url_inverter = (
-        #    f"http://{self.host_name}/solar_api/v1/GetPowerFlowRealtimeData.fcgi")
-        self.url_meter = (
-            f"http://{self.host_name_P1meter}/api/v2/sm/actual")
-
-        self.has_meter = config.config_data['P1meter']['has_meter'] # True / False - Smart Meter active?
-
-        # Initialize with default values
-        self.total_energy_produced_kwh = 0.0
-        self.total_energy_consumed_kwh = 0.0
-        self.total_energy_fed_in_kwh = 0.0
-        self.current_power_consumed_from_grid_kw = 0.0
-        self.current_power_consumed_from_pv_kw = 0.0
-        self.current_power_consumed_total_kw = 0.0
-        self.current_power_fed_in_kw = 0.0
-
-        # Test connection by doing an initial update
+    def get_data(self):
         try:
-            self.update()
-        except Exception:
-            logging.error(
-                "P1meter device: Error: connecting to the device failed")
-            raise
+            self.logger.info(f"Bezig met ophalen van gegevens van P1-meter via {self.url}")
+            response = requests.get(self.url, timeout=5)
+            response.raise_for_status()
+            data = response.json()
+            self.logger.info("Succesvol gegevens ontvangen van P1-meter")
 
-    def copy_data(self, meter_data):
-        '''Copies the results from the API request.'''
-        # Inverter data
-        str_total_produced_wh = inverter_data["Body"]["Data"]["Site"]["E_Total"]
-        total_produced_kwh = float(str_total_produced_wh) * 0.001
-        # Meter data
-        if self.has_meter:
-            str_total_consumed_from_grid_wh = meter_data["Body"]["Data"]["0"]["EnergyReal_WAC_Plus_Absolute"]
-            total_consumed_from_grid_kwh = float(
-                str_total_consumed_from_grid_wh) * 0.001
-            str_total_fed_in_wh = meter_data["Body"]["Data"]["0"]["EnergyReal_WAC_Minus_Absolute"]
-            total_fed_in_kwh = float(str_total_fed_in_wh) * 0.001
-        else:
-            str_total_consumed_from_grid_wh = 0
-            total_consumed_from_grid_kwh = 0
-            str_total_fed_in_wh = 0
-            total_fed_in_kwh = 0
-        # Compute other values
-        total_self_consumption_kwh = total_produced_kwh - total_fed_in_kwh
-        total_consumption_kwh = total_consumed_from_grid_kwh + total_self_consumption_kwh
+        except Exception as e:
+            self.logger.error(f"Fout bij ophalen van P1-meter data: {e}")
+            return None
 
-        # Logging
-        if logging.getLogger().level == logging.DEBUG:
-            logging.debug(f"Fronius device: Absolute values:\n"
-                          f" - Total produced: {str(total_produced_kwh)} kWh\n"
-                          f" - Total grid consumption: {str(total_consumed_from_grid_kwh)} kWh\n"
-                          f" - Total self consumption: {str(total_self_consumption_kwh)} kWh\n"
-                          f" - Total consumption: {str(total_consumption_kwh)} kWh\n"
-                          f" - Total fed in: {str(total_fed_in_kwh)} kWh")
-
-        # Total/absolute values
-        self.total_energy_produced_kwh = total_produced_kwh
-        self.total_energy_consumed_kwh = total_consumption_kwh
-        self.total_energy_fed_in_kwh = total_fed_in_kwh
-
-        # Now extract the momentary values
-        #str_cur_production_w = inverter_data["Body"]["Data"]["Site"]["P_PV"]
-        #cur_production_kw = 0.0 if str_cur_production_w is None else float(
-        #    str_cur_production_w) * 0.001
-        #str_grid_power_w = inverter_data["Body"]["Data"]["Site"]["P_Grid"] or 0
-        #grid_power_kw = float(str_grid_power_w) * 0.001
-        #cur_feed_in_kw = (-grid_power_kw) if grid_power_kw < 0.0 else 0.0
-        #cur_consumption_from_grid = grid_power_kw if grid_power_kw > 0.0 else 0.0
-        #cur_consumption_from_pv = cur_production_kw - cur_feed_in_kw
-        #if cur_consumption_from_pv < 0.0:
-        #    cur_consumption_from_pv = 0.0
-        #cur_consumption_total = cur_consumption_from_grid + cur_consumption_from_pv
-
-        # Logging
-        if logging.getLogger().level == logging.DEBUG:
-            logging.debug(f"Fronius device: Momentary values:\n"
-                          f" - Current production: {str(cur_production_kw)} kW\n"
-                          f" - Current feed-in: {str(cur_feed_in_kw)} kW\n"
-                          f" - Current consumption from grid: {str(cur_consumption_from_grid)}\n"
-                          f" - Current consumption from PV: {str(cur_consumption_from_pv)}\n"
-                          f" - Current total consumption: {str(cur_consumption_total)}")
-
-        # Store results
-        self.current_power_produced_kw = cur_production_kw
-        self.current_power_fed_in_kw = cur_feed_in_kw
-        self.current_power_consumed_from_grid_kw = cur_consumption_from_grid
-        self.current_power_consumed_from_pv_kw = cur_consumption_from_pv
-        self.current_power_consumed_total_kw = cur_consumption_total
-
-    def update(self):
-        '''Updates all device stats.'''
         try:
-            # Query inverter data
-            r_inverter = requests.get(self.url_inverter, timeout=5)
-            r_inverter.raise_for_status()
-            # Query smart meter data
-            if self.has_meter:
-                r_meter = requests.get(self.url_meter, timeout=5)
-                r_meter.raise_for_status()
-                # Extract and process relevant data
-                self.copy_data(r_inverter.json(), r_meter.json())
-            else:
-                self.copy_data(r_inverter.json(), "{}") # Null meter data
-        except requests.exceptions.Timeout:
-            logging.error(f"Fronius device: Timeout requesting "
-                          f"'{self.url_inverter}' or '{self.url_meter}'")
-            raise
-        except requests.exceptions.RequestException as e:
-            logging.error(f"Fronius device: requests exception {e} for URL "
-                          f"'{self.url_inverter}' or '{self.url_meter}'")
-            raise
+            # Tijdstempel verwerken
+            timestamp_str = data.get("timestamp", {}).get("value", "")
+            timestamp = datetime.strptime(timestamp_str[:12], "%y%m%d%H%M%S")
+
+            # Energieverbruik en -teruglevering
+            energy_delivered_t1 = data.get("energy_delivered_tariff1", {}).get("value", 0.0)
+            energy_delivered_t2 = data.get("energy_delivered_tariff2", {}).get("value", 0.0)
+            energy_delivered_t3 = data.get("energy_delivered_tariff3", {}).get("value", 0.0)
+            energy_returned_t1 = data.get("energy_returned_tariff1", {}).get("value", 0.0)
+            energy_returned_t2 = data.get("energy_returned_tariff2", {}).get("value", 0.0)
+            energy_returned_t3 = data.get("energy_returned_tariff3", {}).get("value", 0.0)
+
+            # Vermogen
+            power_delivered = data.get("power_delivered", {}).get("value", 0.0)
+            power_returned = data.get("power_returned", {}).get("value", 0.0)
+            power_delivered_l1 = data.get("power_delivered_l1", {}).get("value", 0.0)
+            power_delivered_l2 = data.get("power_delivered_l2", {}).get("value", 0.0)
+            power_delivered_l3 = data.get("power_delivered_l3", {}).get("value", 0.0)
+            power_returned_l1 = data.get("power_returned_l1", {}).get("value", 0.0)
+            power_returned_l2 = data.get("power_returned_l2", {}).get("value", 0.0)
+            power_returned_l3 = data.get("power_returned_l3", {}).get("value", 0.0)
+
+            # Berekeningen
+            total_energy_consumed_kwh = energy_delivered_t1 + energy_delivered_t2 + energy_delivered_t3
+            total_energy_fed_in_kwh = energy_returned_t1 + energy_returned_t2 + energy_returned_t3
+            current_power_consumed_from_grid_kw = power_delivered_l1 + power_delivered_l2 + power_delivered_l3
+            current_power_fed_in_kw = power_returned_l1 + power_returned_l2 + power_returned_l3
+            current_power_consumed_total_kw = power_delivered - power_returned
+
+            # Placeholder voor nog niet beschikbare gegevens
+            total_energy_produced_kwh = None
+            current_power_produced_kw = None
+            current_power_consumed_from_pv_kw = None
+
+            self.logger.debug(f"P1-meter data op {timestamp}:")
+            self.logger.debug(f"  Totaal verbruikt: {total_energy_consumed_kwh} kWh")
+            self.logger.debug(f"  Totaal teruggeleverd: {total_energy_fed_in_kwh} kWh")
+            self.logger.debug(f"  Huidig verbruik van net: {current_power_consumed_from_grid_kw} kW")
+            self.logger.debug(f"  Huidige teruglevering aan net: {current_power_fed_in_kw} kW")
+            self.logger.debug(f"  Totaal huidig verbruik: {current_power_consumed_total_kw} kW")
+
+            return {
+                "timestamp": timestamp,
+                "total_energy_consumed_kwh": total_energy_consumed_kwh,
+                "total_energy_fed_in_kwh": total_energy_fed_in_kwh,
+                "current_power_consumed_from_grid_kw": current_power_consumed_from_grid_kw,
+                "current_power_fed_in_kw": current_power_fed_in_kw,
+                "current_power_consumed_total_kw": current_power_consumed_total_kw,
+                "total_energy_produced_kwh": total_energy_produced_kwh,
+                "current_power_produced_kw": current_power_produced_kw,
+                "current_power_consumed_from_pv_kw": current_power_consumed_from_pv_kw
+            }
+
+        except Exception as e:
+            self.logger.error(f"Fout bij verwerken van P1-meter data: {e}")
+            return None
