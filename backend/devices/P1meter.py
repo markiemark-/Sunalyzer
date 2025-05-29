@@ -1,19 +1,20 @@
 import requests
 import logging
+import json
 
 
 # Losse P1 meter  devices
-class Fronius:
-    def __init__(self, config):
+class P1meter:
+    def __init__(self, json_data):
         # Demo code for config access
         logging.info(f"P1 device: "
                      f"configured host name is "
-                     f"{config.config_data['P1meter']['host_name']}")
+                     f"{config.config_data['P1meter']['host_name_P1meter']}")
 
-        self.host_name = config.config_data['P1meter']['host_name']
+        self.host_name = config.config_data['P1meter']['host_name_P1meter']
 
-        self.url_inverter = (
-            f"http://{self.host_name}/solar_api/v1/GetPowerFlowRealtimeData.fcgi")
+        #self.url_inverter = (
+        #    f"http://{self.host_name}/solar_api/v1/GetPowerFlowRealtimeData.fcgi")
         self.url_meter = (
             f"http://{self.host_name_P1meter}/api/v2/sm/actual")
 
@@ -33,10 +34,10 @@ class Fronius:
             self.update()
         except Exception:
             logging.error(
-                "Fronius device: Error: connecting to the device failed")
+                "P1meter device: Error: connecting to the device failed")
             raise
 
-    def copy_data(self, inverter_data, meter_data):
+    def copy_data(self, meter_data):
         '''Copies the results from the API request.'''
         # Inverter data
         str_total_produced_wh = inverter_data["Body"]["Data"]["Site"]["E_Total"]
@@ -72,17 +73,17 @@ class Fronius:
         self.total_energy_fed_in_kwh = total_fed_in_kwh
 
         # Now extract the momentary values
-        str_cur_production_w = inverter_data["Body"]["Data"]["Site"]["P_PV"]
-        cur_production_kw = 0.0 if str_cur_production_w is None else float(
-            str_cur_production_w) * 0.001
-        str_grid_power_w = inverter_data["Body"]["Data"]["Site"]["P_Grid"] or 0
-        grid_power_kw = float(str_grid_power_w) * 0.001
-        cur_feed_in_kw = (-grid_power_kw) if grid_power_kw < 0.0 else 0.0
-        cur_consumption_from_grid = grid_power_kw if grid_power_kw > 0.0 else 0.0
-        cur_consumption_from_pv = cur_production_kw - cur_feed_in_kw
-        if cur_consumption_from_pv < 0.0:
-            cur_consumption_from_pv = 0.0
-        cur_consumption_total = cur_consumption_from_grid + cur_consumption_from_pv
+        #str_cur_production_w = inverter_data["Body"]["Data"]["Site"]["P_PV"]
+        #cur_production_kw = 0.0 if str_cur_production_w is None else float(
+        #    str_cur_production_w) * 0.001
+        #str_grid_power_w = inverter_data["Body"]["Data"]["Site"]["P_Grid"] or 0
+        #grid_power_kw = float(str_grid_power_w) * 0.001
+        #cur_feed_in_kw = (-grid_power_kw) if grid_power_kw < 0.0 else 0.0
+        #cur_consumption_from_grid = grid_power_kw if grid_power_kw > 0.0 else 0.0
+        #cur_consumption_from_pv = cur_production_kw - cur_feed_in_kw
+        #if cur_consumption_from_pv < 0.0:
+        #    cur_consumption_from_pv = 0.0
+        #cur_consumption_total = cur_consumption_from_grid + cur_consumption_from_pv
 
         # Logging
         if logging.getLogger().level == logging.DEBUG:
