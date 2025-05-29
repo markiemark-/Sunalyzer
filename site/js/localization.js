@@ -38,13 +38,13 @@ let translations = [
 ["dash_text_today_produced", "Produced today", "Heute erzeugt", "Vandaag geproduceerd"],
 ["dash_text_today_consumed", "Consumed today", "Heute verbraucht", "Vandaag verbruikt"],
 ["dash_text_today_fed_in", "Fed in today", "Heute eingespeist", "Vandaag teruggeleverd"],
-["dash_text_today_autarky", "Today's autarky", "Heutige Autarkie", "Autarkie vandaag"],
+["dash_text_today_autarky", "Today's autarky", "Heutige Autarkie", "Zelfvoorziening vandaag"],
 ["dash_text_today_earned", "Earned today", "Heute verdient", "Vandaag verdiend"],
 
 ["dash_text_all_time_produced", "Produced in total", "Insgesamt erzeugt", "Totaal geproduceerd"],
 ["dash_text_all_time_consumed", "Consumed in total", "Insgesamt verbraucht", "Totaal verbruikt"],
 ["dash_text_all_time_fed_in", "Fed in total", "Insgesamt eingespeist", "Totaal teruggeleverd"],
-["dash_text_all_time_autarky", "Average autarky", "Durchschn. Autarkie", "Gemiddelde autarkie"],
+["dash_text_all_time_autarky", "Average autarky", "Durchschn. Autarkie", "Gemiddelde zelfvoorziening"],
 ["dash_text_all_time_earned", "Earned in total", "Insgesamt verdient", "Totaal verdiend"],
 
 // History
@@ -62,8 +62,8 @@ let translations = [
 ["history_text_consumption_total", "Total consumption", "Gesamtverbrauch", "Totaalverbruik"],
 ["history_card_graph_production_text", "Production Details", "Zeitverlauf der Erzeugung", "Productiedetails"],
 ["history_card_graph_consumption_text", "Consumption Details", "Zeitverlauf des Verbrauchs", "Verbruiksdetails"],
-["history_card_autarky", "Autarky", "Autarkie", "Autarkie"],
-["history_text_autarky", "Achieved autarky", "Erreichte Autarkie", "Bereikte autarkie"],
+["history_card_autarky", "Autarky", "Autarkie", "Zelfvoorziening"],
+["history_text_autarky", "Achieved autarky", "Erreichte Autarkie", "Bereikte Zelfvoorziening"],
 ["history_card_high_res_data_text", "Course of the Day", "Tagesverlauf", "Verloop van de dag"],
 
 // CSV download
