@@ -44,7 +44,7 @@ let translations = [
 ["dash_text_all_time_produced", "Produced in total", "Insgesamt erzeugt", "Geproduceerd"],
 ["dash_text_all_time_consumed", "Consumed in total", "Insgesamt verbraucht", "Verbruikt"],
 ["dash_text_all_time_fed_in", "Fed in total", "Insgesamt eingespeist", "Teruggeleverd"],
-["dash_text_all_time_autarky", "Average autarky", "Durchschn. Autarkie", "Gemiddelde zelfvoorziening"],
+["dash_text_all_time_autarky", "Average autarky", "Durchschn. Autarkie", "Zelfvoorziening"],
 ["dash_text_all_time_earned", "Earned in total", "Insgesamt verdient", "Verdiend"],
 
 // History

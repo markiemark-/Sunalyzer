@@ -69,6 +69,12 @@ services:
       - /volume1/docker/sunalyzer/data:/data
 ```
 
+### Build instructions
+ 
+Docker build . -t mosmit/sunalyzer:v0.03 --platform linux/amd64
+Docker push mosmit/sunalyzer:v0.03  
+
+
 ### Detailled Installation Guide: Synology NAS
 
 If you want to run Sunalyzer on a Synology NAS, [click here](doc/install_synology.md) for detailled installation instructions.
