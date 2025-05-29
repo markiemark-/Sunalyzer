@@ -1,7 +1,7 @@
 let gLangEn = 1;
 let gLangDe = 2;
 let gLangNl = 3;
-let gCurLang = gLangEn;
+let gCurLang = gLangNl;
 
 let translations = [
   // HTML element ID, English (1), German (2), Dutch (3)
