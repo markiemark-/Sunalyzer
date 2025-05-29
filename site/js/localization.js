@@ -241,12 +241,17 @@ function getMonthName(index) {
 }
 
 function getLocale() {
-    return gCurLang == gLangDe ? "de" : "en" : "nl";
+    if (gCurLang == gLangDe) return "de";
+    else if (gCurLang == gLangNl) return "nl";
+    else return "en";
 }
 
 function getUnitDays() {
-    return gCurLang == gLangDe ? "Tage" : "days" : "dagen";
+    if (gCurLang == gLangDe) return "Tage";
+    else if (gCurLang == gLangNl) return "dagen";
+    else return "days";
 }
+
 
 function prettyPrintDateString(date) {
     var d = new Date(date)
