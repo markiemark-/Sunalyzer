@@ -12,8 +12,6 @@ Sunalyzer can easily be self hosted on a Raspberry Pi or a NAS by using Docker. 
 
 ![Screenshot](doc/screenshot.png)
 
-hallo
-
 ## Main Features
 
 - 100% free and open source.
