@@ -70,10 +70,11 @@ services:
 ```
 
 ### Build instructions
- 
+
+``` 
 Docker build . -t mosmit/sunalyzer:v0.03 --platform linux/amd64
 Docker push mosmit/sunalyzer:v0.03  
-
+```
 
 ### Detailled Installation Guide: Synology NAS
 
