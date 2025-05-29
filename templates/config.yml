@@ -4,7 +4,7 @@
 logging: verbose
 
 # Sets the local time zone.
-time_zone: "Europe/Berlin"
+time_zone: "Europe/Amsterdam"
 
 # PV data grabber configuration
 # Currently the following devices are available
