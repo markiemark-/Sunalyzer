@@ -108,6 +108,7 @@ let translations = [
 
 // Info
 ["info_no_data", "No data is available for the selected time span.", "Für den gewählten Zeitraum liegen keine Daten vor.", "Er zijn geen gegevens beschikbaar voor de geselecteerde periode."],
+];
 
 let chartStrings = [
     // HTML element ID          English (1)             German (2)              Dutch (3)
