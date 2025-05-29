@@ -1,147 +1,141 @@
-
 let gLangEn = 1;
 let gLangDe = 2;
-
+let gLangNl = 3;
 let gCurLang = gLangEn;
 
 let translations = [
-    // HTML element ID  English (1)  German (2)
+  // HTML element ID, English (1), German (2), Dutch (3)
+  ["navbar_dropdown_language", "Language", "Sprache", "Taal"],
+  ["sidebar_headline_overview", "Overview", "Übersicht", "Overzicht"],
+  ["sidebar_today", "Today", "Heute", "Vandaag"],
+  ["sidebar_statistics", "Statistics", "Statistiken", "Statistieken"],
+  ["sidebar_headline_history", "History", "Historie", "Geschiedenis"],
+  ["sidebar_by_day", "By Day", "Nach Tag", "Per dag"],
+  ["sidebar_by_month", "By Month", "Nach Monat", "Per maand"],
+  ["sidebar_by_year", "By Year", "Nach Jahr", "Per jaar"],
+  ["sidebar_all_time", "All Time", "Gesamt", "Altijd"],
+  ["sidebar_headline_misc", "Misc", "Sonstiges", "Diversen"],
+  ["sidebar_csv", "CSV Download", "CSV-Download", "CSV-download"],
+// Statistics
+["headline_statistics", "Statistics", "Statistiken", "Statistieken"],
+["stats_card_highest_prod", "Highest Production", "Höchste Erzeugung", "Hoogste productie"],
+["stats_card_best_day", "Best Day", "Bester Tag", "Beste dag"],
+["stats_card_best_month", "Best Month", "Bester Monat", "Beste maand"],
+["stats_card_best_year", "Best Year", "Bestes Jahr", "Beste jaar"],
+["stats_card_averages", "Averages ", "Durchschnittswerte", "Gemiddelden"],
+["stats_card_runtime", "Runtime ", "Laufzeit", "Bedrijfstijd"],
+["statistics_text_avg_daily_prod", "Average daily production ", "Durchschn. täglich erzeugt", "Gemiddelde dagelijkse productie"],
+["statistics_text_start_date", "Date of commissioning ", "Inbetriebnahme der Anlage", "Ingebruiknamedatum"],
+["statistics_text_runtime", "Total runtime ", "Laufzeit der Anlage", "Totale bedrijfstijd"],
 
-    // Navigation bar
-    ["navbar_dropdown_language", "Language", "Sprache"],
+// Dashboard
+["dashboard_subtitle", "Last updated: ", "Letzte Aktualisierung: ", "Laatst bijgewerkt: "],
+["dash_card_current", "Current", "Momentanwerte", "Actueel"],
+["dash_card_today", "Today", "Heutige Werte", "Vandaag"],
+["dash_card_all_time", "All Time", "Allzeit-Werte", "Altijd"],
+["dash_card_24h", "Short Term History", "Aktueller Verlauf", "Korte termijn geschiedenis"],
 
-    // Side bar
-    ["sidebar_headline_overview", "Overview", "Übersicht"],
-    ["sidebar_today", "Today", "Heute"],
-    ["sidebar_statistics", "Statistics", "Statistiken"],
-    ["sidebar_headline_history", "History", "Historie"],
-    ["sidebar_by_day", "By Day", "Nach Tag"],
-    ["sidebar_by_month", "By Month", "Nach Monat"],
-    ["sidebar_by_year", "By Year", "Nach Jahr"],
-    ["sidebar_all_time", "All Time", "Gesamt"],
-    ["sidebar_headline_misc", "Misc", "Sonstiges"],
-    ["sidebar_csv", "CSV Download", "CSV-Download"],
+["dash_text_today_produced", "Produced today", "Heute erzeugt", "Vandaag geproduceerd"],
+["dash_text_today_consumed", "Consumed today", "Heute verbraucht", "Vandaag verbruikt"],
+["dash_text_today_fed_in", "Fed in today", "Heute eingespeist", "Vandaag teruggeleverd"],
+["dash_text_today_autarky", "Today's autarky", "Heutige Autarkie", "Autarkie vandaag"],
+["dash_text_today_earned", "Earned today", "Heute verdient", "Vandaag verdiend"],
 
-    // Statistics
-    ["headline_statistics", "Statistics", "Statistiken"],
-    ["stats_card_highest_prod", "Highest Production", "Höchste Erzeugung"],
-    ["stats_card_best_day", "Best Day", "Bester Tag"],
-    ["stats_card_best_month", "Best Month", "Bester Monat"],
-    ["stats_card_best_year", "Best Year", "Bestes Jahr"],
-    ["stats_card_averages", "Averages ", "Durchschnittswerte"],
-    ["stats_card_runtime", "Runtime ", "Laufzeit"],
-    ["statistics_text_avg_daily_prod", "Average daily production ", "Durchschn. täglich erzeugt"],
-    ["statistics_text_start_date", "Date of commissioning ", "Inbetriebnahme der Anlage"],
-    ["statistics_text_runtime", "Total runtime ", "Laufzeit der Anlage"],
+["dash_text_all_time_produced", "Produced in total", "Insgesamt erzeugt", "Totaal geproduceerd"],
+["dash_text_all_time_consumed", "Consumed in total", "Insgesamt verbraucht", "Totaal verbruikt"],
+["dash_text_all_time_fed_in", "Fed in total", "Insgesamt eingespeist", "Totaal teruggeleverd"],
+["dash_text_all_time_autarky", "Average autarky", "Durchschn. Autarkie", "Gemiddelde autarkie"],
+["dash_text_all_time_earned", "Earned in total", "Insgesamt verdient", "Totaal verdiend"],
 
-    // Dashboard
-    ["dashboard_subtitle", "Last updated: ", "Letzte Aktualisierung: "],
+// History
+["history_card_earned", "Earnings", "Einnahmen", "Opbrengsten"],
+["history_card_usage", "Produced", "Erzeugt", "Geproduceerd"],
+["history_card_consumption", "Consumed", "Verbraucht", "Verbruikt"],
+["history_text_produced", "Energy produced", "Erzeugte PV-Energie", "Geproduceerde energie"],
+["history_text_earned_feedin", "Earned with feed-in", "Verdienst durch Einspeisung", "Opbrengst door teruglevering"],
+["history_text_earned_self", "Saved via self-consumption", "Ersparnis durch Eigenverbrauch", "Besparing door eigenverbruik"],
+["history_text_earned_total", "Total", "Summe", "Totaal"],
+["history_text_fedin", "Fed into the grid", "Ins Netz eingespeist", "Teruggeleverd aan het net"],
+["history_text_self_consumed", "Self consumed", "Selbst verbraucht", "Zelf verbruikt"],
+["history_text_consumption_grid", "Consumption from grid", "Verbrauch aus dem Netz", "Verbruik uit het net"],
+["history_text_consumption_self", "Consumption from PV", "Verbrauch aus PV", "Verbruik van PV"],
+["history_text_consumption_total", "Total consumption", "Gesamtverbrauch", "Totaalverbruik"],
+["history_card_graph_production_text", "Production Details", "Zeitverlauf der Erzeugung", "Productiedetails"],
+["history_card_graph_consumption_text", "Consumption Details", "Zeitverlauf des Verbrauchs", "Verbruiksdetails"],
+["history_card_autarky", "Autarky", "Autarkie", "Autarkie"],
+["history_text_autarky", "Achieved autarky", "Erreichte Autarkie", "Bereikte autarkie"],
+["history_card_high_res_data_text", "Course of the Day", "Tagesverlauf", "Verloop van de dag"],
 
-    ["dash_card_current", "Current", "Momentanwerte"],
-    ["dash_card_today", "Today", "Heutige Werte"],
-    ["dash_card_all_time", "All Time", "Allzeit-Werte"],
-    ["dash_card_24h", "Short Term History", "Aktueller Verlauf"],
+// CSV download
+["csv_subtitle", "Download .csv reports ", "Report-Dateien im .csv-Format herunterladen", ".csv-rapporten downloaden"],
+["csv_label_time_range", "Time range:", "Zeitraum:", "Tijdsperiode:"],
+["csv_label_resolution", "Resolution:", "Granularität:", "Resolutie:"],
+["csv_range_rad_lbl_day", "A single day", "Ein Tag", "Een dag"],
+["csv_range_rad_lbl_month", "A month", "Ein Monat", "Een maand"],
+["csv_range_rad_lbl_year", "A year", "Ein jahr", "Een jaar"],
+["csv_range_rad_lbl_all", "All time", "Alles", "Altijd"],
+["csv_res_rad_lbl_day", "Single days", "Einzelne Tage", "Per dag"],
+["csv_res_rad_lbl_month", "Summed up by months", "Auf Monate summiert", "Per maand gesommeerd"],
+["csv_res_rad_lbl_year", "Summed up by years", "Auf Jahre summiert", "Per jaar gesommeerd"],
 
-    ["dash_text_today_produced", "Produced today", "Heute erzeugt"],
-    ["dash_text_today_consumed", "Consumed today", "Heute verbraucht"],
-    ["dash_text_today_fed_in", "Fed in today", "Heute eingespeist"],
-    ["dash_text_today_autarky", "Today's autarky", "Heutige Autarkie"],
-    ["dash_text_today_earned", "Earned today", "Heute verdient"],
+// Months combo box
+["cbx_month_1", "January", "Januar", "Januari"],
+["cbx_month_2", "February", "Februar", "Februari"],
+["cbx_month_3", "March", "März", "Maart"],
+["cbx_month_4", "April", "April", "April"],
+["cbx_month_5", "May", "Mai", "Mei"],
+["cbx_month_6", "June", "Juni", "Juni"],
+["cbx_month_7", "July", "Juli", "Juli"],
+["cbx_month_8", "August", "August", "Augustus"],
+["cbx_month_9", "September", "September", "September"],
+["cbx_month_10", "October", "Oktober", "Oktober"],
+["cbx_month_11", "November", "November", "November"],
+["cbx_month_12", "December", "Dezember", "December"],
 
-    ["dash_text_all_time_produced", "Produced in total", "Insgesamt erzeugt"],
-    ["dash_text_all_time_consumed", "Consumed in total", "Insgesamt verbraucht"],
-    ["dash_text_all_time_fed_in", "Fed in total", "Insgesamt eingespeist"],
-    ["dash_text_all_time_autarky", "Average autarky", "Durchschn. Autarkie"],
-    ["dash_text_all_time_earned", "Earned in total", "Insgesamt verdient"],
+// Months combo box
+["csv_cbx_month_1", "January", "Januar", "Januari"],
+["csv_cbx_month_2", "February", "Februar", "Februari"],
+["csv_cbx_month_3", "March", "März", "Maart"],
+["csv_cbx_month_4", "April", "April", "April"],
+["csv_cbx_month_5", "May", "Mai", "Mei"],
+["csv_cbx_month_6", "June", "Juni", "Juni"],
+["csv_cbx_month_7", "July", "Juli", "Juli"],
+["csv_cbx_month_8", "August", "August", "Augustus"],
+["csv_cbx_month_9", "September", "September", "September"],
+["csv_cbx_month_10", "October", "Oktober", "Oktober"],
+["csv_cbx_month_11", "November", "November", "November"],
+["csv_cbx_month_12", "December", "Dezember", "December"],
 
-    // History
-    ["history_card_earned", "Earnings", "Einnahmen"],
-    ["history_card_usage", "Produced", "Erzeugt"],
-    ["history_card_consumption", "Consumed", "Verbraucht"],
-    ["history_text_produced", "Energy produced", "Erzeugte PV-Energie"],
-    ["history_text_earned_feedin", "Earned with feed-in", "Verdienst durch Einspeisung"],
-    ["history_text_earned_self", "Saved via self-consumption", "Ersparnis durch Eigenverbrauch"],
-    ["history_text_earned_total", "Total", "Summe"],
-    ["history_text_fedin", "Fed into the grid", "Ins Netz eingespeist"],
-    ["history_text_self_consumed", "Self consumed", "Selbst verbraucht"],
-    ["history_text_consumption_grid", "Consumption from grid", "Verbrauch aus dem Netz"],
-    ["history_text_consumption_self", "Consumption from PV", "Verbrauch aus PV"],
-    ["history_text_consumption_total", "Total consumption", "Gesamtverbrauch"],
-    ["history_card_graph_production_text", "Production Details", "Zeitverlauf der Erzeugung"],
-    ["history_card_graph_consumption_text", "Consumption Details", "Zeitverlauf des Verbrauchs"],
-    ["history_card_autarky", "Autarky", "Autarkie"],
-    ["history_text_autarky", "Achieved autarky", "Erreichte Autarkie"],
-    ["history_card_high_res_data_text", "Course of the Day", "Tagesverlauf"],
-
-    // CSV download
-    ["csv_subtitle", "Download .csv reports ", "Report-Dateien im .csv-Format herunterladen"],
-    ["csv_label_time_range", "Time range:", "Zeitraum:"],
-    ["csv_label_resolution", "Resolution:", "Granularität:"],
-    ["csv_range_rad_lbl_day", "A single day", "Ein Tag"],
-    ["csv_range_rad_lbl_month", "A month", "Ein Monat"],
-    ["csv_range_rad_lbl_year", "A year", "Ein jahr"],
-    ["csv_range_rad_lbl_all", "All time", "Alles"],
-    ["csv_res_rad_lbl_day", "Single days", "Einzelne Tage"],
-    ["csv_res_rad_lbl_month", "Summed up by months", "Auf Monate summiert"],
-    ["csv_res_rad_lbl_year", "Summed up by years", "Auf Jahre summiert"],
-
-    // Months combo box
-    ["cbx_month_1", "January", "Januar"],
-    ["cbx_month_2", "February", "Februar"],
-    ["cbx_month_3", "March", "März"],
-    ["cbx_month_4", "April", "April"],
-    ["cbx_month_5", "May", "Mai"],
-    ["cbx_month_6", "June", "Juni"],
-    ["cbx_month_7", "July", "Juli"],
-    ["cbx_month_8", "August", "August"],
-    ["cbx_month_9", "September", "September"],
-    ["cbx_month_10", "October", "Oktober"],
-    ["cbx_month_11", "November", "November"],
-    ["cbx_month_12", "December", "Dezember"],
-
-    // Months combo box
-    ["csv_cbx_month_1", "January", "Januar"],
-    ["csv_cbx_month_2", "February", "Februar"],
-    ["csv_cbx_month_3", "March", "März"],
-    ["csv_cbx_month_4", "April", "April"],
-    ["csv_cbx_month_5", "May", "Mai"],
-    ["csv_cbx_month_6", "June", "Juni"],
-    ["csv_cbx_month_7", "July", "Juli"],
-    ["csv_cbx_month_8", "August", "August"],
-    ["csv_cbx_month_9", "September", "September"],
-    ["csv_cbx_month_10", "October", "Oktober"],
-    ["csv_cbx_month_11", "November", "November"],
-    ["csv_cbx_month_12", "December", "Dezember"],
-
-    // Info
-    ["info_no_data", "No data is available for the selected time span.", "Für den gewählten Zeitraum liegen keine Daten vor."],
-];
+// Info
+["info_no_data", "No data is available for the selected time span.", "Für den gewählten Zeitraum liegen keine Daten vor.", "Er zijn geen gegevens beschikbaar voor de geselecteerde periode."],
 
 let chartStrings = [
-    // HTML element ID          English (1)             German (2)
-    ["chart_produced_w", "Production", "Erzeugung"],
-    ["chart_consumed_w", "Consumption", "Verbrauch"],
-    ["chart_fed_in_w", "Feed-in", "Einspeisung"],
-    ["chart_from_grid", "From grid", "Aus dem Netz"],
-    ["chart_from_pv", "From PV", "Aus PV"],
-    ["chart_produced", "Produced", "Erzeugt"],
-    ["chart_consumed", "Consumed", "Verbraucht"],
-    ["chart_fed_in", "Fed in", "Eingespeist"],
-    ["chart_self_consumed", "Self consumed", "Eigenverbrauch"],
-    ["chart_produced_self_kwh", "Consumed directly", "Direktverbrauch"],
-    ["chart_produced_grid_kwh", "Feed-in", "Einspeisung"],
-    ["chart_consumed_pv_kwh", "From PV", "Aus PV"],
-    ["chart_consumed_grid_kwh", "From grid", "Netzbezug"],
-    ["chart_total", "Total", "Gesamt"],
+    // HTML element ID          English (1)             German (2)              Dutch (3)
+    ["chart_produced_w", "Production", "Erzeugung", "Productie"],
+    ["chart_consumed_w", "Consumption", "Verbrauch", "Verbruik"],
+    ["chart_fed_in_w", "Feed-in", "Einspeisung", "Teruglevering"],
+    ["chart_from_grid", "From grid", "Aus dem Netz", "Uit het net"],
+    ["chart_from_pv", "From PV", "Aus PV", "Van PV"],
+    ["chart_produced", "Produced", "Erzeugt", "Geproduceerd"],
+    ["chart_consumed", "Consumed", "Verbraucht", "Verbruikt"],
+    ["chart_fed_in", "Fed in", "Eingespeist", "Teruggeleverd"],
+    ["chart_self_consumed", "Self consumed", "Eigenverbrauch", "Zelf verbruikt"],
+    ["chart_produced_self_kwh", "Consumed directly", "Direktverbrauch", "Direct verbruikt"],
+    ["chart_produced_grid_kwh", "Feed-in", "Einspeisung", "Teruglevering"],
+    ["chart_consumed_pv_kwh", "From PV", "Aus PV", "Van PV"],
+    ["chart_consumed_grid_kwh", "From grid", "Netzbezug", "Uit net"],
+    ["chart_total", "Total", "Gesamt", "Totaal"],
 ];
 
+
 let historyStrings = [
-    // HTML element ID      English (1)             German (2)
-    ["daily_data", "Daily Data", "Daten nach Tag"],
-    ["monthly_data", "Monthly Data", "Daten nach Monat"],
-    ["yearly_data", "Yearly Data", "Daten nach Jahr"],
-    ["all_time_data", "All Time Data", "Allzeitdaten"],
+    // HTML element ID      English (1)             German (2)           Dutch (3)
+    ["daily_data", "Daily Data", "Daten nach Tag", "Daggegevens"],
+    ["monthly_data", "Monthly Data", "Daten nach Monat", "Maandgegevens"],
+    ["yearly_data", "Yearly Data", "Daten nach Jahr", "Jaargegevens"],
+    ["all_time_data", "All Time Data", "Allzeitdaten", "Altijdgegevens"],
 ];
+
 
 
 function restoreLanguage() {
@@ -158,6 +152,12 @@ function switchLanguageToGerman() {
     switchLanguageByIndex(gLangDe);
 }
 
+// Nieuw: wisselen naar Nederlands
+function switchLanguageToDutch() {
+    switchLanguageByIndex(gLangNl);
+}
+
+
 function switchLanguageByIndex(index) {
     gCurLang = index;
     localStorage.setItem("lang", index)
@@ -169,6 +169,7 @@ function switchLanguageByIndex(index) {
         }
     });
 }
+
 
 function getChartString(id) {
     for (i = 0; i < chartStrings.length; ++i)
@@ -191,66 +192,60 @@ const format2_en = new Intl.NumberFormat('en-US', {
     maximumFractionDigits: 2,
 });
 
+const format2_de = new Intl.NumberFormat('de-DE', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+});
+
+const format2_nl = new Intl.NumberFormat('nl-NL', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+});
+
 // Number format with 0 decimals
 const format0_en = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
 });
 
-// Number format with 2 decimals
-const format2_de = new Intl.NumberFormat('de-DE', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-});
-
-// Number format with 0 decimals
 const format0_de = new Intl.NumberFormat('de-DE', {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
 });
 
-function numFormat(number, digits) {
-    if (digits == 2) {
-        if (gCurLang == gLangDe)
-            return format2_de.format(number);
-        else
-            return format2_en.format(number);
-    }
-    else {
-        if (gCurLang == gLangDe)
-            return format0_de.format(number);
-        else
-            return format0_en.format(number);
-    }
-}
+const format0_nl = new Intl.NumberFormat('nl-NL', {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+});
 
 
 let monthNames = [
-    // English (1), German (2)
-    ["January", "Januar"],
-    ["February", "Februar"],
-    ["March", "März"],
-    ["April", "April"],
-    ["May", "Mai"],
-    ["June", "Juni"],
-    ["July", "Juli"],
-    ["August", "August"],
-    ["September", "September"],
-    ["October", "Oktober"],
-    ["November", "November"],
-    ["December", "Dezember"],
+    // English (1), German (2), Dutch (3)
+    ["January", "Januar", "Januari"],
+    ["February", "Februar", "Februari"],
+    ["March", "März", "Maart"],
+    ["April", "April", "April"],
+    ["May", "Mai", "Mei"],
+    ["June", "Juni", "Juni"],
+    ["July", "Juli", "Juli"],
+    ["August", "August", "Augustus"],
+    ["September", "September", "September"],
+    ["October", "Oktober", "Oktober"],
+    ["November", "November", "November"],
+    ["December", "Dezember", "December"],
 ];
+
 
 function getMonthName(index) {
     return monthNames[index][gCurLang - 1];
 }
 
 function getLocale() {
-    return gCurLang == gLangDe ? "de" : "en";
+    return gCurLang == gLangDe ? "de" : "en" : "nl";
 }
 
 function getUnitDays() {
-    return gCurLang == gLangDe ? "Tage" : "days";
+    return gCurLang == gLangDe ? "Tage" : "days" : "dagen";
 }
 
 function prettyPrintDateString(date) {
