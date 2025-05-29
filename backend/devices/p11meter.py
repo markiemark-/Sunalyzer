@@ -1,4 +1,5 @@
-iimport requests
+import requests
+import logging
 from datetime import datetime
 from devices.device import Device
 
