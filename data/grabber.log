@@ -1,0 +1,180 @@
+2025-05-30 13:53:01 INFO     Starting Sunalyzer grabber version 1.0.17
+2025-05-30 13:53:01 INFO     Grabber: Reading backend configuration from config.yml
+2025-05-30 13:53:01 INFO     Verbose logging is enabled
+2025-05-30 13:53:01 INFO     Grabber: Setting tme zone to Europe/Berlin
+2025-05-30 15:53:01 INFO     Grabber: Time is now 15:53:01 05/30/25 CEST
+2025-05-30 15:53:01 INFO     Grabber: Loading device adapter 'p2meter'
+2025-05-30 15:53:01 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:02 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:53:02 INFO     Grabber: Checking if data base exists
+2025-05-30 15:53:02 DEBUG    Grabber: Entering main loop
+2025-05-30 15:53:02 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:02 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:02 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:53:02 DEBUG    Grabber: capturing real time data(15:53:3.0, -0.591, 1.058)
+2025-05-30 15:53:07 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:07 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:07 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:53:12 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:12 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:12 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:53:17 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:17 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:18 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:53:23 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:23 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:24 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:53:30 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:30 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:30 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:53:35 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:35 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:36 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:53:41 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:41 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:41 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:53:46 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:46 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:46 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:53:51 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:51 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:51 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:53:56 DEBUG    Grabber: 15:53: Updating device data
+2025-05-30 15:53:56 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:53:57 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:54:03 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:03 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:03 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:54:08 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:08 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:08 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:54:08 DEBUG    Grabber: capturing real time data(15:54:3.0, -0.5129999999999999, 1.017)
+2025-05-30 15:54:13 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:13 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:13 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:54:18 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:18 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:18 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:54:23 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:23 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:24 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:54:30 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:30 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:30 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:54:35 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:35 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:36 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:54:41 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:41 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:41 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1004
+2025-05-30 15:54:46 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:46 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:46 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:54:51 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:51 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:52 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:54:57 DEBUG    Grabber: 15:54: Updating device data
+2025-05-30 15:54:57 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:54:57 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:55:03 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:03 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:03 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1003
+2025-05-30 15:55:08 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:08 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:09 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:55:14 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:14 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:14 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:55:14 DEBUG    Grabber: capturing real time data(15:55:3.0, -0.275, 0.8480000000000001)
+2025-05-30 15:55:19 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:19 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:19 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:55:24 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:24 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:24 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1003
+2025-05-30 15:55:29 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:29 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:29 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:55:36 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:36 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:36 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:55:41 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:41 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:41 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:55:46 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:46 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:46 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:55:51 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:51 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:52 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:55:57 DEBUG    Grabber: 15:55: Updating device data
+2025-05-30 15:55:57 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:55:57 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:56:02 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:02 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:02 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:56:08 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:08 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:09 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1004
+2025-05-30 15:56:14 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:14 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:14 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:56:19 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:19 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:19 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:56:19 DEBUG    Grabber: capturing real time data(15:56:3.0, -0.08100000000000007, 0.7869999999999999)
+2025-05-30 15:56:24 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:24 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:24 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1002
+2025-05-30 15:56:29 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:29 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:30 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1004
+2025-05-30 15:56:36 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:36 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:36 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1001
+2025-05-30 15:56:41 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:41 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:41 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:56:46 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:46 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:46 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:56:51 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:51 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:52 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:56:57 DEBUG    Grabber: 15:56: Updating device data
+2025-05-30 15:56:57 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:56:57 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:57:02 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:02 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:02 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1003
+2025-05-30 15:57:08 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:08 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:09 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1004
+2025-05-30 15:57:14 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:14 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:14 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1003
+2025-05-30 15:57:19 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:19 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:19 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1001
+2025-05-30 15:57:24 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:24 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:25 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1008
+2025-05-30 15:57:25 DEBUG    Grabber: capturing real time data(15:57:3.0, 2.056, 0.8280000000000001)
+2025-05-30 15:57:30 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:30 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:30 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006
+2025-05-30 15:57:35 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:35 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:35 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1005
+2025-05-30 15:57:41 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:41 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:42 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1000
+2025-05-30 15:57:47 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:47 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:47 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1003
+2025-05-30 15:57:52 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:52 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:52 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1007
+2025-05-30 15:57:57 DEBUG    Grabber: 15:57: Updating device data
+2025-05-30 15:57:57 DEBUG    Starting new HTTP connection (1): 192.168.2.13:80
+2025-05-30 15:57:57 DEBUG    http://192.168.2.13:80 "GET /api/v2/sm/actual HTTP/1.1" 200 1006

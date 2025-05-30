@@ -1,0 +1,9 @@
+services:
+  sunalyzer:
+    container_name: sunalyzer
+    image: mosmit/sunalyzer:v0.08
+    restart: always
+    ports:
+      - "8020:5000"
+    volumes:
+      - /c/github/Sunalyzer/data:/data

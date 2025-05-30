@@ -46,6 +46,9 @@ function setName() {
         document.title ="Sunalyzer "+ name;
     })    
   }
+function numFormat(number, decimals) {
+  return number.toFixed(decimals);
+}
 
   async function fetchNameJSON() {
     const response = await fetch(gBaseUrl + 'name');
