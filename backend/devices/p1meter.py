@@ -1,7 +1,7 @@
 import requests
 import logging
 from datetime import datetime
-from backend.logger import get_logger
+from ..logger import get_logger
 
 # from .device import Device
 
@@ -9,8 +9,11 @@ from backend.logger import get_logger
 class p1meter:
     def __init__(self, config):
         self.config = config
-        self.logger = self.get_logger(__name__)
+        self.logger = get_logger(__name__)
         self.url = config.get("url", "http://192.168.2.13/api/v2/sm/actual")
+
+
+
 
     def get_data(self):
         try:
