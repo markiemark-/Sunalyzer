@@ -13,8 +13,6 @@ class p1meter:
         self.url = config.get("url", "http://192.168.2.13/api/v2/sm/actual")
 
 
-
-
     def get_data(self):
         try:
             self.logger.info(f"Bezig met ophalen van gegevens van P1-meter via {self.url}")
@@ -52,15 +50,15 @@ class p1meter:
 
             # Berekeningen
             total_energy_consumed_kwh = energy_delivered_t1 + energy_delivered_t2 + energy_delivered_t3
-            total_energy_fed_in_kwh = energy_returned_t1 + energy_returned_t2 + energy_returned_t3
+            total_energy_fed_in_kwh = energy_returned_t1 + energy_returned_t2 + energy_returned_t3 # Teruggeleverd
             current_power_consumed_from_grid_kw = power_delivered_l1 + power_delivered_l2 + power_delivered_l3
             current_power_fed_in_kw = power_returned_l1 + power_returned_l2 + power_returned_l3
             current_power_consumed_total_kw = power_delivered - power_returned
 
             # Placeholder voor nog niet beschikbare gegevens
-            total_energy_produced_kwh = None
-            current_power_produced_kw = None
-            current_power_consumed_from_pv_kw = None
+            total_energy_produced_kwh = None  # Geproduceerd totaal door zonnepanelen   totaal uit API zonnepanelen
+            current_power_produced_kw = None  # Nu geleverd door zonnepanenen
+            current_power_consumed_from_pv_kw = None # Zonnepanelen actueel - huidig terug geleverd van P1
 
             self.logger.debug(f"P1-meter data op {timestamp}:")
             self.logger.debug(f"  Totaal verbruikt: {total_energy_consumed_kwh} kWh")
