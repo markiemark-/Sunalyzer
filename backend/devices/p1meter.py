@@ -57,8 +57,8 @@ class p1meter:
 
             # Placeholder voor nog niet beschikbare gegevens
             total_energy_produced_kwh = None  # Geproduceerd totaal door zonnepanelen   totaal uit API zonnepanelen
-            current_power_produced_kw = None  # Nu geleverd door zonnepanenen
-            current_power_consumed_from_pv_kw = None # Zonnepanelen actueel - huidig terug geleverd van P1
+            current_power_produced_kw = current_power_fed_in_kw + 50.0  # Nu geleverd door zonnepanenen
+            current_power_consumed_from_pv_kw = 50.0 # Zonnepanelen actueel - huidig terug geleverd van P1
 
             self.logger.debug(f"P1-meter data op {timestamp}:")
             self.logger.debug(f"  Totaal verbruikt: {total_energy_consumed_kwh} kWh")
